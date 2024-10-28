@@ -20,7 +20,7 @@ public class CaptureMacroService extends ScheduledMacroService {
         try {
             this.robot = new Robot();
         } catch (AWTException e) {
-            throw new CustomException(ErrorMessage.ROBOT_INIT_FAILURE);
+            throw new CustomException(ErrorMessage.ROBOT_INITIALIZATION_FAILED);
         }
     }
 
@@ -57,7 +57,7 @@ public class CaptureMacroService extends ScheduledMacroService {
 
             System.out.println("Captured screen area: " + captureArea);
         } catch (IOException e) {
-            throw new CustomException(ErrorMessage.CAPTURE_SAVE_FAILURE, e);
+            throw new CustomException(ErrorMessage.CAPTURE_SAVE_FAILED, e);
         }
     }
 }

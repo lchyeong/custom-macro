@@ -15,7 +15,7 @@ public class KeyMacroService extends ScheduledMacroService {
         try {
             this.robot = new Robot();
         } catch (AWTException e) {
-            throw new CustomException(ErrorMessage.ROBOT_INIT_FAILURE);
+            throw new CustomException(ErrorMessage.ROBOT_INITIALIZATION_FAILED);
         }
     }
 

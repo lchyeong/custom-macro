@@ -8,7 +8,7 @@ public abstract class ScheduledMacro {
 
     public void setInterval(int interval) {
         if (interval <= 0) {
-            throw new CustomException(ErrorMessage.INTERVAL_NOT_NEGATIVE);
+            throw new CustomException(ErrorMessage.INVALID_INTERVAL);
         }
         this.interval = interval;
     }

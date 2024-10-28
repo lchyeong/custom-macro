@@ -25,15 +25,43 @@
     │   │   └── com
     │   │       └── custommacro
     │   │           └── custommacro
-    │   │               └── CustomMacroApplication.java
+    │   │               ├── CustommacroApplication.java
+    │   │               ├── Launcher.java
+    │   │               ├── MainView.java
+    │   │               ├── global
+    │   │               │   ├── commonInterface
+    │   │               │   │   └── MacroTask.java
+    │   │               │   └── exception
+    │   │               │       ├── CustomException.java
+    │   │               │       └── ErrorMessage.java
+    │   │               └── scheduledMacro
+    │   │                   ├── controller
+    │   │                   │   └── ScheduledMacroController.java
+    │   │                   ├── domain
+    │   │                   │   ├── CaptureMacro.java
+    │   │                   │   ├── KeyMacro.java
+    │   │                   │   └── ScheduledMacro.java
+    │   │                   ├── service
+    │   │                   │   ├── CaptureMacroService.java
+    │   │                   │   ├── KeyMacroService.java
+    │   │                   │   └── ScheduledMacroService.java
+    │   │                   ├── util
+    │   │                   └── view
+    │   │                       ├── CaptureMacroView.java
+    │   │                       └── ScheduledMacroView.java
     │   └── resources
-    │       └── application.properties
+    │       ├── application.properties
+    │       └── logback.xml
     └── test
         └── java
             └── com
                 └── custommacro
                     └── custommacro
-                        └── CustomMacroApplicationTests.java
+                        ├── CustommacroApplicationTests.java
+                        └── scheduledMacro
+                            └── service
+                                └── KeyMacroServiceTest.java
+
 
 ```
 
@@ -41,18 +69,20 @@
 
 ## 🚀 **기능**
 
-### 매크로 ON/OFF
+### 공통 기능
 
-- 사용자는 매크로를 시작하거나 중단할 수 있습니다.
+- 매크로를 시작하거나 중단할 수 있습니다.
+- 반복 주기를 설정할 수 있습니다.
+- 각 기능을 ON/OFF할 수 있습니다.
 
 ### 화면 캡쳐 기능
 
-- **반복할 시간 선택**: 캡처 주기를 설정할 수 있습니다 (예: 5초, 10초).
 - **캡쳐 ON/OFF**: 체크박스를 통해 매크로 실행 시 캡처 기능을 실행할지 여부를 결정할 수 있습니다.
 - **디스플레이 선택**: 여러 모니터 중 캡처할 디스플레이를 선택할 수 있습니다.
+- **캡쳐 영역 선택**: 캡쳐를 원하는 영역을 마우스로 지정할 수 있습니다.
 - **저장 경로 선택**: 캡처한 이미지를 저장할 경로를 지정할 수 있습니다.
 
 ### 반복 키 세팅
 
-- **반복할 키 입력**: 반복할 키(예: Enter, Space, F5 등)를 지정할 수 있습니다.
 - **반복할 키 ON/OFF**: 체크박스를 통해 매크로 실행 시 반복 키 기능을 실행할지 여부를 결정할 수 있습니다.
+- **반복할 키 입력**: 반복할 키를 지정할 수 있습니다.

@@ -39,3 +39,14 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "com.custommacro.custommacro.Launcher"
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    
+    from({
+        configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
+    })
+}

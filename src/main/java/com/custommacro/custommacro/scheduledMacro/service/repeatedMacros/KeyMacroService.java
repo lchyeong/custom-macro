@@ -1,8 +1,9 @@
-package com.custommacro.custommacro.scheduledMacro.service;
+package com.custommacro.custommacro.scheduledMacro.service.repeatedMacros;
 
-import com.custommacro.custommacro.global.exception.CustomException;
-import com.custommacro.custommacro.global.exception.ErrorMessage;
-import com.custommacro.custommacro.scheduledMacro.domain.KeyMacro;
+import com.custommacro.custommacro.scheduledMacro.exception.CustomException;
+import com.custommacro.custommacro.scheduledMacro.exception.ErrorMessage;
+import com.custommacro.custommacro.scheduledMacro.model.repeatedModel.KeyMacro;
+import com.custommacro.custommacro.scheduledMacro.service.ScheduledMacroService;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.util.concurrent.TimeUnit;
@@ -35,7 +36,7 @@ public class KeyMacroService extends ScheduledMacroService {
     @Override
     protected void execute() {
         scheduler.scheduleAtFixedRate(() -> {
-            if (running && keyMacro != null) {
+            if (isRunning.get() && keyMacro != null) {
                 performKeyPress(keyMacro.getKeyCode());
             }
         }, 0, keyMacro.getInterval(), TimeUnit.MILLISECONDS);

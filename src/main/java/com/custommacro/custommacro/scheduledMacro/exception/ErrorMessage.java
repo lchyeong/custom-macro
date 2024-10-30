@@ -1,6 +1,8 @@
-package com.custommacro.custommacro.global.exception;
+package com.custommacro.custommacro.scheduledMacro.exception;
 
 public enum ErrorMessage {
+
+    //Repeated model exceptions
     ROBOT_INITIALIZATION_FAILED("Failed to initialize Robot instance."),
     INVALID_INTERVAL("Interval must be positive."),
     CAPTURE_SAVE_FAILED("Failed to save capture."),

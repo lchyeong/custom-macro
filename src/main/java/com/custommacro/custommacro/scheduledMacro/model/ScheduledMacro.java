@@ -1,7 +1,7 @@
-package com.custommacro.custommacro.scheduledMacro.domain;
+package com.custommacro.custommacro.scheduledMacro.model;
 
-import com.custommacro.custommacro.global.exception.CustomException;
-import com.custommacro.custommacro.global.exception.ErrorMessage;
+import com.custommacro.custommacro.scheduledMacro.exception.CustomException;
+import com.custommacro.custommacro.scheduledMacro.exception.ErrorMessage;
 
 public abstract class ScheduledMacro {
     protected int interval;

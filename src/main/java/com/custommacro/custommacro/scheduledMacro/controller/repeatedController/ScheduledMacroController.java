@@ -1,7 +1,7 @@
-package com.custommacro.custommacro.scheduledMacro.controller;
+package com.custommacro.custommacro.scheduledMacro.controller.repeatedController;
 
-import com.custommacro.custommacro.scheduledMacro.service.CaptureMacroService;
-import com.custommacro.custommacro.scheduledMacro.service.KeyMacroService;
+import com.custommacro.custommacro.scheduledMacro.service.repeatedMacros.CaptureMacroService;
+import com.custommacro.custommacro.scheduledMacro.service.repeatedMacros.KeyMacroService;
 
 public class ScheduledMacroController {
 
@@ -25,8 +25,8 @@ public class ScheduledMacroController {
         return keyMacroService.isRunning();
     }
 
-    public void startCaptureMacro(int x, int y, int width, int height, int interval) {
-        captureMacroService.startMacro(x, y, width, height, interval);
+    public void startCaptureMacro(int x, int y, int width, int height, int interval, String saveDirectory) {
+        captureMacroService.startMacro(x, y, width, height, interval, saveDirectory);
     }
 
     public void stopCaptureMacro() {

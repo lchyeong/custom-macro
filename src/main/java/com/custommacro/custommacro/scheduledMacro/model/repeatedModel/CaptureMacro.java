@@ -1,4 +1,6 @@
-package com.custommacro.custommacro.scheduledMacro.domain;
+package com.custommacro.custommacro.scheduledMacro.model.repeatedModel;
+
+import com.custommacro.custommacro.scheduledMacro.model.ScheduledMacro;
 
 public class CaptureMacro extends ScheduledMacro {
 

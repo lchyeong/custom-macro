@@ -1,4 +1,4 @@
-package com.custommacro.custommacro.global.exception;
+package com.custommacro.custommacro.scheduledMacro.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
